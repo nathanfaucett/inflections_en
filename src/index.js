@@ -1,6 +1,8 @@
 var inflector = require("inflections")("en");
 
 
+inflector.clear();
+
 inflector.plural(/$/, "s");
 inflector.plural(/(ch|sh|ss|[sxz])$/i, "$1es");
 inflector.plural(/([^aeiouy])y$/i, "$1ies");
