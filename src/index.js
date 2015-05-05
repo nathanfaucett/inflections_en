@@ -4,11 +4,14 @@ var inflector = require("inflections")("en");
 inflector.clear();
 
 inflector.plural(/$/, "s");
-inflector.plural(/(ch|sh|ss|[sxz])$/i, "$1es");
+inflector.plural(/([sxz]|[cs]h)$/i, "$1es");
+inflector.plural(/([^aeiouy]o)$/i, "$1es");
 inflector.plural(/([^aeiouy])y$/i, "$1ies");
 
 inflector.singular(/s$/i, "");
-inflector.singular(/(ch|sh|ss|[sxz])es$/i, "$1");
+inflector.singular(/(ss)$/i, "$1");
+inflector.singular(/([sxz]|[cs]h)es$/, "$1");
+inflector.singular(/([^aeiouy]o)es$/, "$1");
 inflector.singular(/([^aeiouy])ies$/i, "$1y");
 
 inflector.irregular("child", "children");

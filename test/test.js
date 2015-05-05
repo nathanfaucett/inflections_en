@@ -11,9 +11,11 @@ describe("inflections_en", function() {
 
 
         assert.equal(inflector.pluralize("word"), "words");
+        assert.equal(inflector.pluralize("kiss"), "kisses");
         assert.equal(inflector.pluralize("sky"), "skies");
         assert.equal(inflector.pluralize("box"), "boxes");
 
+        assert.equal(inflector.singularize("kisses"), "kiss");
         assert.equal(inflector.singularize("words"), "word");
         assert.equal(inflector.singularize("skies"), "sky");
         assert.equal(inflector.singularize("boxes"), "box");
