@@ -1,4 +1,4 @@
-var inflector = require("inflections")("en");
+var inflector = require("@nathanfaucett/inflections")("en");
 
 
 inflector.clear();
